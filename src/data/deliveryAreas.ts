@@ -1,7 +1,7 @@
 export interface DeliveryArea {
   id: string;
   name: string;
-  charge: number; // in BDT (৳)
+  charge: number; // in BDT (Tk)
   estimatedTime: string;
   zone: string;
 }

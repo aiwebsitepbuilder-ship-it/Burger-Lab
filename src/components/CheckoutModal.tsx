@@ -132,7 +132,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               </div>
               <div className="flex items-baseline space-x-1">
                 <span className="text-white/60">Total to Pay:</span>
-                <span className="text-base font-black text-red-500 font-['Outfit']">৳{total}</span>
+                <span className="text-base font-black text-red-500 font-['Outfit']">Tk {total}</span>
               </div>
             </div>
 
@@ -306,7 +306,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     <span>PLACING YOUR ORDER...</span>
                   ) : (
                     <>
-                      <span>CONFIRM ORDER (৳{total})</span>
+                      <span>CONFIRM ORDER (Tk {total})</span>
                       <ArrowRight className="w-4 h-4" />
                     </>
                   )}
@@ -354,7 +354,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               </div>
               <div className="border-t border-white/10 pt-2 flex justify-between text-sm">
                 <span className="font-bold text-white">Grand Total:</span>
-                <span className="font-black text-red-500 font-['Outfit'] text-base">৳{total}</span>
+                <span className="font-black text-red-500 font-['Outfit'] text-base">Tk {total}</span>
               </div>
             </div>
 

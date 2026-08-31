@@ -81,7 +81,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
       postcode: postcodeInput,
     });
     setIsDeliveryUpdated(true);
-    showToast(`Delivery area updated to ${area.name} (৳${area.charge})`);
+    showToast(`Delivery area updated to ${area.name} (Tk ${area.charge})`);
     setTimeout(() => setIsDeliveryUpdated(false), 2500);
   };
 
@@ -96,7 +96,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
         areaId: area.id,
         areaName: area.name,
       });
-      showToast(`Selected ${area.name} — Delivery charge: ৳${area.charge}`);
+      showToast(`Selected ${area.name} — Delivery charge: Tk ${area.charge}`);
     }
   };
 
@@ -172,14 +172,14 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                     ⚠ Minimum Order Requirement
                   </h4>
                   <p className="text-xs sm:text-sm text-amber-300/90 mt-0.5 leading-relaxed">
-                    Your current order total is <span className="font-extrabold text-white bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30">৳{subtotal}</span> — you must have an order with a minimum of <span className="font-extrabold text-amber-200">৳{minimumOrderAmount}</span> to place your order.
+                    Your current order total is <span className="font-extrabold text-white bg-amber-950/80 px-2 py-0.5 rounded border border-amber-500/30">Tk {subtotal}</span> — you must have an order with a minimum of <span className="font-extrabold text-amber-200">Tk {minimumOrderAmount}</span> to place your order.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center space-x-2 self-end sm:self-center shrink-0">
                 <span className="text-xs font-mono bg-amber-950/60 px-3 py-1.5 rounded-lg border border-amber-500/30 text-amber-200">
-                  Add <strong className="text-white font-bold">৳{shortageAmount}</strong> more
+                  Add <strong className="text-white font-bold">Tk {shortageAmount}</strong> more
                 </span>
                 <button
                   type="button"
@@ -201,7 +201,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                     ✓ Minimum Order Requirement Reached!
                   </h4>
                   <p className="text-xs sm:text-sm text-emerald-300/90 mt-0.5">
-                    Your order total is <strong className="text-white font-extrabold">৳{subtotal}</strong> (exceeds the ৳{minimumOrderAmount} minimum). You are eligible to proceed to checkout!
+                    Your order total is <strong className="text-white font-extrabold">Tk {subtotal}</strong> (exceeds the Tk {minimumOrderAmount} minimum). You are eligible to proceed to checkout!
                   </p>
                 </div>
               </div>
@@ -316,7 +316,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                           {/* Mobile-only Price Tag */}
                           <div className="md:hidden mt-2 flex items-center space-x-2 text-xs">
                             <span className="text-white/50">Unit Price:</span>
-                            <span className="font-bold text-red-500 font-['Outfit'] text-sm">৳{item.price}</span>
+                            <span className="font-bold text-red-500 font-['Outfit'] text-sm">Tk {item.price}</span>
                           </div>
                         </div>
 
@@ -335,7 +335,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                       {/* 2. PRICE (Col 7-8) - Desktop */}
                       <div className="hidden md:block md:col-span-2 text-center">
                         <span className="text-base font-extrabold text-white font-['Outfit']">
-                          ৳{item.price}
+                          Tk {item.price}
                         </span>
                       </div>
 
@@ -391,7 +391,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                           Subtotal:
                         </span>
                         <span className="text-base sm:text-lg font-black text-red-500 font-['Outfit']">
-                          ৳{itemSubtotal}
+                          Tk {itemSubtotal}
                         </span>
                       </div>
 
@@ -455,7 +455,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                     >
                       {DELIVERY_AREAS.map((area) => (
                         <option key={area.id} value={area.id} className="bg-zinc-900 text-white py-2">
-                          {area.name} — ৳{area.charge} ({area.estimatedTime})
+                          {area.name} — Tk {area.charge} ({area.estimatedTime})
                         </option>
                       ))}
                     </select>
@@ -535,7 +535,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                   </button>
 
                   <span className="text-xs text-white/50 font-mono">
-                    Delivery: <strong className="text-white font-bold font-['Outfit']">৳{deliveryCharge}</strong>
+                    Delivery: <strong className="text-white font-bold font-['Outfit']">Tk {deliveryCharge}</strong>
                   </span>
                 </div>
               </form>
@@ -569,7 +569,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                   <div className="flex items-center justify-between text-white/70">
                     <span>Subtotal</span>
                     <span className="font-bold text-white font-['Outfit'] text-base">
-                      ৳{subtotal}
+                      Tk {subtotal}
                     </span>
                   </div>
 
@@ -580,7 +580,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                       <span className="text-[11px] text-white/40 font-mono">({deliveryArea.name.split(' ')[0]})</span>
                     </div>
                     <span className="font-bold text-white font-['Outfit'] text-base">
-                      ৳{deliveryCharge}
+                      Tk {deliveryCharge}
                     </span>
                   </div>
 
@@ -592,7 +592,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                         <span className="font-semibold text-xs uppercase">Discount ({promoCode})</span>
                       </div>
                       <span className="font-extrabold font-['Outfit'] text-base">
-                        −৳{discount}
+                        −Tk {discount}
                       </span>
                     </div>
                   )}
@@ -607,7 +607,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                     </div>
                     <div className="text-right">
                       <span className="text-2xl sm:text-3xl font-black text-red-500 font-['Outfit']">
-                        ৳{total}
+                        Tk {total}
                       </span>
                     </div>
                   </div>
@@ -684,7 +684,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                     if (isMinimumReached) {
                       setIsCheckoutOpen(true);
                     } else {
-                      showToast(`Minimum order requirement is ৳${minimumOrderAmount}. Please add ৳${shortageAmount} more!`);
+                      showToast(`Minimum order requirement is Tk ${minimumOrderAmount}. Please add Tk ${shortageAmount} more!`);
                     }
                   }}
                   disabled={!isMinimumReached}
@@ -696,7 +696,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                   title={
                     isMinimumReached
                       ? 'Proceed with your food order'
-                      : `Minimum order amount of ৳${minimumOrderAmount} required`
+                      : `Minimum order amount of Tk ${minimumOrderAmount} required`
                   }
                 >
                   <span>PROCEED TO CHECKOUT</span>
@@ -706,7 +706,7 @@ export const CartPage: React.FC<CartPageProps> = ({ onBackToHome, onExploreMenu 
                 {/* Explanatory notice when checkout is disabled */}
                 {!isMinimumReached && (
                   <p className="text-[11px] text-center text-amber-400/90 font-mono leading-tight">
-                    * Minimum order of ৳{minimumOrderAmount} required. Add ৳{shortageAmount} more to checkout.
+                    * Minimum order of Tk {minimumOrderAmount} required. Add Tk {shortageAmount} more to checkout.
                   </p>
                 )}
               </div>

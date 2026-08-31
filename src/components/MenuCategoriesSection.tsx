@@ -197,7 +197,7 @@ export const MenuCategoriesSection: React.FC<MenuCategoriesSectionProps> = ({
                               <span className="text-lg font-black text-red-500 font-['Outfit']">
                                 {item.price}
                               </span>
-                              <span className="text-xs font-bold text-white/50 uppercase">৳</span>
+                              <span className="text-xs font-bold text-white/50 uppercase">Tk</span>
                             </div>
                           ) : item.prices && item.prices.length > 0 ? (
                             <div className="flex flex-wrap items-center gap-1.5">
@@ -213,10 +213,10 @@ export const MenuCategoriesSection: React.FC<MenuCategoriesSectionProps> = ({
                                         ? 'bg-emerald-600 border-emerald-500 text-white'
                                         : 'bg-zinc-800 hover:bg-zinc-700 active:bg-red-600 active:text-white border-white/10 text-white'
                                     }`}
-                                    title={`Add ${p.label} (${p.price}৳) to cart`}
+                                    title={`Add ${p.label} (${p.price} Tk) to cart`}
                                   >
                                     <span className={isAdded ? 'text-white' : 'text-white/60'}>{p.label}:</span>
-                                    <span className={isAdded ? 'text-white font-black' : 'text-red-400 font-black'}>{p.price}৳</span>
+                                    <span className={isAdded ? 'text-white font-black' : 'text-red-400 font-black'}>{p.price} Tk</span>
                                     {isAdded ? (
                                       <Check className="w-3 h-3 text-white ml-0.5" />
                                     ) : (
@@ -310,7 +310,7 @@ export const MenuCategoriesSection: React.FC<MenuCategoriesSectionProps> = ({
                     className="p-2.5 rounded-lg bg-zinc-950/60 border border-white/5 flex items-center justify-between text-xs"
                   >
                     <span className="text-white/80 font-medium">{upgrade.name}</span>
-                    <span className="text-red-500 font-black font-['Outfit'] text-sm">+{upgrade.price}৳</span>
+                    <span className="text-red-500 font-black font-['Outfit'] text-sm">+{upgrade.price} Tk</span>
                   </div>
                 ))}
               </div>
@@ -327,7 +327,7 @@ export const MenuCategoriesSection: React.FC<MenuCategoriesSectionProps> = ({
                   {ASIAN_EXTRAS.map((extra, idx) => (
                     <div key={idx} className="p-2.5 rounded-lg bg-zinc-950/60 border border-white/5 flex items-center justify-between text-xs">
                       <span className="text-white/80 font-medium">{extra.name}</span>
-                      <span className="text-red-500 font-black font-['Outfit'] text-sm">+{extra.price}৳</span>
+                      <span className="text-red-500 font-black font-['Outfit'] text-sm">+{extra.price} Tk</span>
                     </div>
                   ))}
                 </div>

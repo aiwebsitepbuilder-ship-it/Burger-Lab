@@ -34,7 +34,7 @@ interface CartContextType {
   removePromoCode: () => void;
 
   // Cart Totals & Minimum Rule
-  minimumOrderAmount: number; // ৳500
+  minimumOrderAmount: number; // Tk 500
   subtotal: number;
   deliveryCharge: number;
   discount: number;
@@ -56,7 +56,7 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-const MINIMUM_ORDER_AMOUNT = 500; // ৳500 minimum order requirement
+const MINIMUM_ORDER_AMOUNT = 500; // Tk 500 minimum order requirement
 
 export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   // Load initial cart from localStorage if available, otherwise default to empty
@@ -214,8 +214,8 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     } else if (cleanCode === 'TASTY50') {
       setPromoCode(cleanCode);
       setDiscountAmount(50);
-      setPromoSuccess('৳50 Off Voucher Applied!');
-      showToast('৳50 discount coupon applied!');
+      setPromoSuccess('Tk 50 Off Voucher Applied!');
+      showToast('Tk 50 discount coupon applied!');
       return true;
     } else {
       setPromoError('Invalid coupon code. Try "BURGERLAB10" or "TASTY50".');

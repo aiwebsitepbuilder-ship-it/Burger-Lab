@@ -155,7 +155,7 @@ function MainAppContent() {
             </div>
             <div className="text-left">
               <span className="block text-[10px] text-white/80 leading-none">View Cart</span>
-              <span className="block text-sm font-black font-['Outfit'] leading-tight">৳{subtotal}</span>
+              <span className="block text-sm font-black font-['Outfit'] leading-tight">Tk {subtotal}</span>
             </div>
             <ArrowRight className="w-4 h-4 text-white/80 group-hover:translate-x-1 transition-transform" />
           </button>

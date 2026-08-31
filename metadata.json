@@ -1,0 +1,6 @@
+{
+  "name": "Burger Lab",
+  "description": "Official website for Burger Lab Bangladesh – serving premium, consistently high-quality burgers, loaded fries, sides, rice bowls, soups, and drinks across 4 Dhaka branches (Mirpur, Bashundhara, Dhanmondi, Uttara).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
